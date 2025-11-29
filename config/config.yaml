@@ -1,0 +1,45 @@
+artifacts_root: artifacts
+
+data_acquisition:
+  root_dir: artifacts/data_acquisition
+  source: "https://www.kaggle.com/datasets/competitions/store-sales-time-series-forecasting"
+  dataset_name: "store-sales-time-series-forecasting"
+  local_dir: artifacts/data_acquisition
+  data_files:
+    train: "train.csv"
+    test: "test.csv"
+    stores: "stores.csv"
+    oil: "oil.csv"
+    holidays_events: "holidays_events.csv"
+    transactions: "transactions.csv"
+    sample_submission: "sample_submission.csv"
+
+
+
+data_preprocessing:
+  root_dir: artifacts/data_preprocessing
+  train_file: "train_merged.csv"
+  test_file: "test_merged.csv"
+
+features_dataTransformation:
+  root_dir: artifacts/features_dataTransformation
+  input_train_file: artifacts/data_preprocessing/train_merged.csv
+  input_test_file: artifacts/data_preprocessing/test_merged.csv
+  train_final: train_final.csv
+  test_final: test_final.csv
+  scaler_file: artifacts/features_dataTransformation/scaler.joblib
+
+
+
+modelSelection:
+  input_train_file: artifacts/features_dataTransformation/train_final.csv
+  input_test_file: artifacts/features_dataTransformation/test_final.csv
+
+
+
+modelBuildingAndEvaluation:
+  root_dir: artifacts/model
+  input_train_file: artifacts/features_dataTransformation/train_final.csv
+  input_test_file: artifacts/features_dataTransformation/test_final.csv
+  model_file: artifacts/model/model.joblib
+  evaluation_metrics: evaluation_metrics.json

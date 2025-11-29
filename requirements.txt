@@ -16,13 +16,14 @@ tqdm                      # Progress bars
 joblib                     # Model serialization
 gdown                      # Kaggle/download utilities
 dvc                       # Data versioning
-mlflow==2.2.2             # Model lifecycle and experiment tracking
+mlflow            # Model lifecycle and experiment tracking
 dagshub                   # Integrate MLflow/DVC
 pyyaml                    # Configuration files
-ensure==1.0.2              # Validation
+ensure              # Validation
 types-PyYAML              # Type hinting for PyYAML
 opendatasets              # Download datasets from Kaggle and other sources
-dotenv                    # Environment variable management
+dotenv  
+python-box                   # Environment variable management
 
 
 # Backend Framework for APIs
@@ -35,3 +36,10 @@ uvicorn                      # ASGI server for fastapi
 notebook                  # For EDA and experimentation
 
 # -e .
+
+
+# Install critical packages via conda first
+# conda install -c conda-forge pyarrow pandas numpy matplotlib seaborn plotly scikit-learn xgboost statsmodels scipy
+
+# Then install the rest via pip
+# pip install mlflow==2.2.2 dagshub catboost gdown dvc tqdm joblib pyyaml fastapi uvicorn notebook graphviz dash ensure==1.0.2 types-PyYAML opendatasets python-dotenv
