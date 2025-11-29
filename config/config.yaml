@@ -4,7 +4,7 @@ data_acquisition:
   root_dir: artifacts/data_acquisition
   source: "https://www.kaggle.com/datasets/competitions/store-sales-time-series-forecasting"
   dataset_name: "store-sales-time-series-forecasting"
-  local_dir: artifacts/data_acquisition
+  local_dir: artifacts/data_acquisition/store-sales-time-series-forecasting
   data_files:
     train: "train.csv"
     test: "test.csv"
