@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/MyCase/Projects/DSAI/portfolio/Sales_Forecasting_and_Analytics/mlruns/0/b46b3122c7d243f4b465a882a6b4682c/artifacts
+end_time: 1764587361601
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b46b3122c7d243f4b465a882a6b4682c
+run_name: colorful-foal-201
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1764587354786
+status: 3
+tags: []
+user_id: roshankahaneDSAI

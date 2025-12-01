@@ -1,5 +1,5 @@
 from ml_service.config.configuration import ConfigurationManager
-from ml_service.logging import logger
+from ml_service.logging.logger import logging
 from ml_service.constants import *
 from ml_service.components.feature_engineering import FeatureEngineeringAndDataTransformation
 from pathlib import Path
@@ -24,11 +24,11 @@ class FeatureEngineeringTrainingPipeline:
 if __name__ == "__main__":
     STAGE_NAME = "Feature Engineering & Data Transformation"
     try:
-        logger.info("*******************************")
-        logger.info(f">>>>>>> stage {STAGE_NAME} started <<<<<<")
+        logging.info("*******************************")
+        logging.info(f">>>>>>> stage {STAGE_NAME} started <<<<<<")
         obj = FeatureEngineeringTrainingPipeline()
         obj.main()
-        logger.info(f">>>>>>> stage {STAGE_NAME} completed <<<<<<")
+        logging.info(f">>>>>>> stage {STAGE_NAME} completed <<<<<<")
     except Exception as e:
-        logger.exception(e)
+        logging.exception(e)
         raise e

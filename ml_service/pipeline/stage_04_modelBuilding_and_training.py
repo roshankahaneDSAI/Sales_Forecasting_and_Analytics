@@ -1,10 +1,10 @@
 from ml_service.config.configuration import ConfigurationManager
 from ml_service.components.modelBuilding_and_evaluation import ModelBuildingAndEvaluation
-from ml_service.logging import logger
+from ml_service.logging.logger import logging
 from ml_service.constants import CONFIG_FILE_PATH, PARAMS_FILE_PATH
 
 import dagshub
-dagshub.init(repo_owner='phoenixarjun007', repo_name='SalesNexus', mlflow=True)
+dagshub.init(repo_owner='roshankahaneDSAI', repo_name='Sales_Forecasting_and_Analytics', mlflow=True)
 
 import mlflow
 with mlflow.start_run():
@@ -24,7 +24,9 @@ class ModelBuildingAndEvaluationTrainingPipeline:
         process = ModelBuildingAndEvaluation(model_and_eval_config)
 
         metrics = process.run_pipeline()
-        logger.info(f"✅ Evaluation Done! Metrics saved to {model_and_eval_config.metrics_file}")
+        # logging.info(f"✅ Evaluation Done! Metrics saved to {model_and_eval_config.metrics_file}")
+        logging.info(f"Evaluation Done! Metrics saved to {model_and_eval_config.metrics_file}")
+
 
         process.create_submission(model_and_eval_config.input_test_file,
                                 "submission_XgBoost_model1.csv")
@@ -33,11 +35,11 @@ class ModelBuildingAndEvaluationTrainingPipeline:
 if __name__ == "__main__":
     STAGE_NAME = "Model Building and Evaluation Stage"
     try:
-        logger.info("*******************************")
-        logger.info(f">>>>>>> stage {STAGE_NAME} started <<<<<<")
+        logging.info("*******************************")
+        logging.info(f">>>>>>> stage {STAGE_NAME} started <<<<<<")
         pipeline = ModelBuildingAndEvaluationTrainingPipeline()
         pipeline.main()
-        logger.info(f">>>>>>> stage {STAGE_NAME} completed <<<<<<")
+        logging.info(f">>>>>>> stage {STAGE_NAME} completed <<<<<<")
     except Exception as e:
-        logger.exception(e)
+        logging.exception(e)
         raise e

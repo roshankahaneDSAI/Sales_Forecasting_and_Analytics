@@ -51,30 +51,30 @@ class ConfigurationManager:
         )
     
 
-    # def get_feature_engineering_and_data_transformation_config(self) -> FeatureEngineeringAndDataTransformationConfig:
-    #     """Get the configuration for feature engineering and data transformation."""
-    #     config = self.config.features_dataTransformation
-    #     feature_config = FeatureEngineeringAndDataTransformationConfig(
-    #         root_dir=Path(config.root_dir),
-    #         input_train_file=config.input_train_file,
-    #         input_test_file=config.input_test_file,
-    #         train_file=config.train_final,
-    #         test_file=config.test_final,
-    #         scaler_file=config.scaler_file
-    #     )
-    #     create_directories([feature_config.root_dir])
-    #     return feature_config
+    def get_feature_engineering_and_data_transformation_config(self) -> FeatureEngineeringAndDataTransformationConfig:
+        """Get the configuration for feature engineering and data transformation."""
+        config = self.config.features_dataTransformation
+        feature_config = FeatureEngineeringAndDataTransformationConfig(
+            root_dir=Path(config.root_dir),
+            input_train_file=config.input_train_file,
+            input_test_file=config.input_test_file,
+            train_file=config.train_final,
+            test_file=config.test_final,
+            scaler_file=config.scaler_file
+        )
+        create_directories([feature_config.root_dir])
+        return feature_config
     
 
-    # def get_modelBuilding_and_evaluation_config(self) -> ModelBuildingAndEvaluationConfig:
-    #     """Construct the EvaluationConfig object based on modelBuildingAndEvaluation settings."""
-    #     model_cfg = self.config.modelBuildingAndEvaluation
+    def get_modelBuilding_and_evaluation_config(self) -> ModelBuildingAndEvaluationConfig:
+        """Construct the EvaluationConfig object based on modelBuildingAndEvaluation settings."""
+        model_cfg = self.config.modelBuildingAndEvaluation
 
-    #     return ModelBuildingAndEvaluationConfig(
-    #         path_of_model=Path(model_cfg.model_file),
-    #         input_train_file=Path(model_cfg.input_train_file),
-    #         input_test_file=Path(model_cfg.input_test_file),
-    #         metrics_file=Path(model_cfg.evaluation_metrics),
-    #         all_params=self.params,
-    #         mlflow_uri=self.params.get("TRACKING_SERVER", "")
-    #     )
+        return ModelBuildingAndEvaluationConfig(
+            path_of_model=Path(model_cfg.model_file),
+            input_train_file=Path(model_cfg.input_train_file),
+            input_test_file=Path(model_cfg.input_test_file),
+            metrics_file=Path(model_cfg.evaluation_metrics),
+            all_params=self.params,
+            mlflow_uri=self.params.get("TRACKING_SERVER", "")
+        )

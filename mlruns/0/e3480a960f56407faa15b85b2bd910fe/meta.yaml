@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/MyCase/Projects/DSAI/portfolio/Sales_Forecasting_and_Analytics/mlruns/0/e3480a960f56407faa15b85b2bd910fe/artifacts
+end_time: 1764588933388
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e3480a960f56407faa15b85b2bd910fe
+run_name: redolent-flea-641
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1764588922918
+status: 3
+tags: []
+user_id: roshankahaneDSAI

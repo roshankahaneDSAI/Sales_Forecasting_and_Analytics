@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/MyCase/Projects/DSAI/portfolio/Sales_Forecasting_and_Analytics/mlruns/0/277e7fff2b294a5292d04bd4d1c95b0d/artifacts
+end_time: 1764588532685
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 277e7fff2b294a5292d04bd4d1c95b0d
+run_name: amazing-gnu-104
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1764588527606
+status: 3
+tags: []
+user_id: roshankahaneDSAI

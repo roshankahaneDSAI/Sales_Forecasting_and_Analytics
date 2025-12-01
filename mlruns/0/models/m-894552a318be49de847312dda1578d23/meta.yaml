@@ -1,0 +1,10 @@
+artifact_location: file:///D:/MyCase/Projects/DSAI/portfolio/Sales_Forecasting_and_Analytics/mlruns/0/models/m-894552a318be49de847312dda1578d23/artifacts
+creation_timestamp: 1764587354823
+experiment_id: '0'
+last_updated_timestamp: 1764587361517
+model_id: m-894552a318be49de847312dda1578d23
+model_type: null
+name: model
+source_run_id: b46b3122c7d243f4b465a882a6b4682c
+status: 2
+status_message: null

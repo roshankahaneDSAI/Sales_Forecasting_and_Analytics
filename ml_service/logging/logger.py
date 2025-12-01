@@ -15,7 +15,7 @@ logging.basicConfig(
         logging.StreamHandler(sys.stdout),
     ]
 )
-logger = logging.getLogger("SalesNexusLogger")
+logger = logging.getLogger("Sales_Forecasting_and_Analytics")
 
 # import logging
 # import os

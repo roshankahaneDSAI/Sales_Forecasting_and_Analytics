@@ -93,7 +93,7 @@ class ModelBuildingAndEvaluation:
 
             if tracking_url_type_store != "file":
                 mlflow.sklearn.log_model(self.model, "model",
-                                          registered_model_name="SalesNexus_XGBoost_Model")
+                                          registered_model_name="Sales_Forecasting_and_Analytics")
             else:
                 mlflow.sklearn.log_model(self.model, "model")
 

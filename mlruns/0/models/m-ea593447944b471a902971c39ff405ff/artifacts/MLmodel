@@ -1,0 +1,22 @@
+artifact_path: file:///D:/MyCase/Projects/DSAI/portfolio/Sales_Forecasting_and_Analytics/mlruns/0/models/m-ea593447944b471a902971c39ff405ff/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.12
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.2
+mlflow_version: 3.6.0
+model_id: m-ea593447944b471a902971c39ff405ff
+model_size_bytes: 4500214
+model_uuid: m-ea593447944b471a902971c39ff405ff
+prompts: null
+run_id: b0078b973f0f4bd5ab1d249cce1f5b12
+utc_time_created: '2025-12-01 11:43:45.742036'

@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/MyCase/Projects/DSAI/portfolio/Sales_Forecasting_and_Analytics/mlruns/0/b0078b973f0f4bd5ab1d249cce1f5b12/artifacts
+end_time: 1764589437105
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b0078b973f0f4bd5ab1d249cce1f5b12
+run_name: fortunate-ox-202
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1764589425601
+status: 3
+tags: []
+user_id: roshankahaneDSAI

@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/MyCase/Projects/DSAI/portfolio/Sales_Forecasting_and_Analytics/mlruns/0/4bd717523f74445cb9727c09e92ce8ea/artifacts
+end_time: 1764587890944
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4bd717523f74445cb9727c09e92ce8ea
+run_name: colorful-fawn-610
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1764587880272
+status: 3
+tags: []
+user_id: roshankahaneDSAI

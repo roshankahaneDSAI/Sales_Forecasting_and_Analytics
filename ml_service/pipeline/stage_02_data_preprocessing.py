@@ -1,9 +1,9 @@
 from pathlib import Path
 from ml_service.config.configuration import ConfigurationManager
 from ml_service.constants import *
-from ml_service.components.data_loader import DataLoader
+from ml_service.components.data_ingestion import DataLoader
 from ml_service.components.data_processing import DataProcessor
-from ml_service.logging import logger
+from ml_service.logging.logger import logging
 
 class DataPreprocessingTrainingPipeline:
     """Pipeline for merging, cleaning, and saving preprocessed train/test files."""
@@ -30,11 +30,11 @@ class DataPreprocessingTrainingPipeline:
 if __name__ == "__main__":
     STAGE_NAME = "Data Preprocessing Stage"
     try:
-        logger.info("*******************************")
-        logger.info(f">>>>>>> stage {STAGE_NAME} started <<<<<<")
+        logging.info("*******************************")
+        logging.info(f">>>>>>> stage {STAGE_NAME} started <<<<<<")
         obj = DataPreprocessingTrainingPipeline()
         obj.main()
-        logger.info(f">>>>>>> stage {STAGE_NAME} completed <<<<<<")
+        logging.info(f">>>>>>> stage {STAGE_NAME} completed <<<<<<")
     except Exception as e:
-        logger.exception(e)
+        logging.exception(e)
         raise e
