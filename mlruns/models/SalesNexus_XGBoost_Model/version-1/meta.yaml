@@ -1,0 +1,15 @@
+creation_timestamp: 1764582723627
+current_stage: None
+deployment_job_state: null
+description: null
+last_updated_timestamp: 1764582723627
+model_id: m-668c42b356ce43ec912aa9a43fee2f5c
+name: SalesNexus_XGBoost_Model
+run_id: b7c3624f6cba4b0ab31a587c8aed9ac8
+run_link: null
+source: models:/m-668c42b356ce43ec912aa9a43fee2f5c
+status: READY
+status_message: null
+storage_location: file:///D:/MyCase/Projects/DSAI/portfolio/Sales_Forecasting_and_Analytics/mlruns/0/models/m-668c42b356ce43ec912aa9a43fee2f5c/artifacts
+user_id: null
+version: 1
