@@ -9,6 +9,7 @@ from urllib.parse import urlparse
 from xgboost import XGBRegressor
 from ml_service.utils.main_utils import save_json
 from ml_service.constants import PARAMS_FILE_PATH
+from mlflow.models import infer_signature
 
 
 class ModelBuildingAndEvaluation:
@@ -34,11 +35,15 @@ class ModelBuildingAndEvaluation:
         train_split = train_df[train_df["date"].dt.year <= 2016].reset_index(drop=True)
         val_split = train_df[train_df["date"].dt.year == 2017].reset_index(drop=True)
 
-        self.X_train = train_split.drop(columns=["sales", "date"])
-        self.y_train = train_split["sales"]
+        cat_columns = ["family", "state", "city", "type_x", "type_y", "sales", "date"]
+        target_col = "sales"   # or whatever target is
 
-        self.X_test = val_split.drop(columns=["sales", "date"])
-        self.y_test = val_split["sales"]
+        self.X_train = train_split.drop(columns=cat_columns)
+        self.y_train = train_split[target_col]
+
+        self.X_test = val_split.drop(columns=cat_columns)
+        self.y_test = val_split[target_col]
+    
 
     def train_model(self):
         """Train XGBoost Model based on config parameters."""
@@ -51,6 +56,7 @@ class ModelBuildingAndEvaluation:
             colsample_bytree=self.config.all_params["COLSAMPLE_BY_TREE"],
             objective=self.config.all_params["OBJECTIVE"]
         )
+
         self.model.fit(self.X_train, self.y_train)
 
         # Save trained model
@@ -71,7 +77,9 @@ class ModelBuildingAndEvaluation:
 
     def log_into_mlflow(self, metrics: dict):
         """Log Model Parameters and Metrics into MLflow."""
-        mlflow.set_tracking_uri(self.config.mlflow_uri)
+        # mlflow.set_tracking_uri(self.config.mlflow_uri)
+        mlflow.set_tracking_uri("sqlite:///mlflow.db")
+
         tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
         model_params = {
             "MODEL_TYPE": self.config.all_params["MODEL_TYPE"],
@@ -87,15 +95,38 @@ class ModelBuildingAndEvaluation:
             "OBJECTIVE": self.config.all_params["OBJECTIVE"]
         }
 
+        # with mlflow.start_run():
+        #     mlflow.log_params(model_params)
+        #     mlflow.log_metrics(metrics)
+
+        #     if tracking_url_type_store != "file":
+        #         mlflow.sklearn.log_model(self.model, "model",
+        #                                   registered_model_name="Sales_Forecasting_and_Analytics")
+        #     else:
+        #         mlflow.sklearn.log_model(self.model, "model")
+
+        # Suppose you have X_train, y_train available in this class
+        signature = infer_signature(self.X_train, self.model.predict(self.X_train))
+
         with mlflow.start_run():
             mlflow.log_params(model_params)
             mlflow.log_metrics(metrics)
 
             if tracking_url_type_store != "file":
-                mlflow.sklearn.log_model(self.model, "model",
-                                          registered_model_name="Sales_Forecasting_and_Analytics")
+                mlflow.sklearn.log_model(
+                    sk_model=self.model,
+                    name="model",
+                    registered_model_name="Sales_Forecasting_and_Analytics",
+                    signature=signature,
+                    input_example=self.X_train.iloc[:5],  # small sample
+                )
             else:
-                mlflow.sklearn.log_model(self.model, "model")
+                mlflow.sklearn.log_model(
+                    sk_model=self.model,
+                    name="model",
+                    signature=signature,
+                    input_example=self.X_train.iloc[:5],
+                )
 
     def create_submission(self, test_file, submission_file):
         """Create Submission File for Kaggle-style prediction."""

@@ -1,0 +1,104 @@
+artifact_path: file:///D:/MyCase/Projects/DSAI/portfolio/Sales_Forecasting_and_Analytics/mlruns/0/models/m-30f26403e38f41cbb842905184311c36/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.12
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.2
+is_signature_from_type_hint: false
+mlflow_version: 3.6.0
+model_id: m-30f26403e38f41cbb842905184311c36
+model_size_bytes: 4520155
+model_uuid: m-30f26403e38f41cbb842905184311c36
+prompts: null
+run_id: 05b8032de031416ba3e65db627cab2b4
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "long", "name": "id", "required": true}, {"type": "long", "name":
+    "store_nbr", "required": true}, {"type": "long", "name": "onpromotion", "required":
+    true}, {"type": "long", "name": "cluster", "required": true}, {"type": "double",
+    "name": "transactions", "required": true}, {"type": "double", "name": "dcoilwtico",
+    "required": true}, {"type": "long", "name": "year", "required": true}, {"type":
+    "long", "name": "day", "required": true}, {"type": "long", "name": "is_weekend",
+    "required": true}, {"type": "long", "name": "day_of_year", "required": true},
+    {"type": "long", "name": "is_month_start", "required": true}, {"type": "long",
+    "name": "is_month_end", "required": true}, {"type": "double", "name": "onpromotion_trend",
+    "required": true}, {"type": "double", "name": "month_sin", "required": true},
+    {"type": "double", "name": "month_cos", "required": true}, {"type": "double",
+    "name": "day_of_week_sin", "required": true}, {"type": "double", "name": "day_of_week_cos",
+    "required": true}, {"type": "long", "name": "family_BABY CARE", "required": true},
+    {"type": "long", "name": "family_BEAUTY", "required": true}, {"type": "long",
+    "name": "family_BEVERAGES", "required": true}, {"type": "long", "name": "family_BOOKS",
+    "required": true}, {"type": "long", "name": "family_BREAD/BAKERY", "required":
+    true}, {"type": "long", "name": "family_CELEBRATION", "required": true}, {"type":
+    "long", "name": "family_CLEANING", "required": true}, {"type": "long", "name":
+    "family_DAIRY", "required": true}, {"type": "long", "name": "family_DELI", "required":
+    true}, {"type": "long", "name": "family_EGGS", "required": true}, {"type": "long",
+    "name": "family_FROZEN FOODS", "required": true}, {"type": "long", "name": "family_GROCERY
+    I", "required": true}, {"type": "long", "name": "family_GROCERY II", "required":
+    true}, {"type": "long", "name": "family_HARDWARE", "required": true}, {"type":
+    "long", "name": "family_HOME AND KITCHEN I", "required": true}, {"type": "long",
+    "name": "family_HOME AND KITCHEN II", "required": true}, {"type": "long", "name":
+    "family_HOME APPLIANCES", "required": true}, {"type": "long", "name": "family_HOME
+    CARE", "required": true}, {"type": "long", "name": "family_LADIESWEAR", "required":
+    true}, {"type": "long", "name": "family_LAWN AND GARDEN", "required": true}, {"type":
+    "long", "name": "family_LINGERIE", "required": true}, {"type": "long", "name":
+    "family_LIQUOR,WINE,BEER", "required": true}, {"type": "long", "name": "family_MAGAZINES",
+    "required": true}, {"type": "long", "name": "family_MEATS", "required": true},
+    {"type": "long", "name": "family_PERSONAL CARE", "required": true}, {"type": "long",
+    "name": "family_PET SUPPLIES", "required": true}, {"type": "long", "name": "family_PLAYERS
+    AND ELECTRONICS", "required": true}, {"type": "long", "name": "family_POULTRY",
+    "required": true}, {"type": "long", "name": "family_PREPARED FOODS", "required":
+    true}, {"type": "long", "name": "family_PRODUCE", "required": true}, {"type":
+    "long", "name": "family_SCHOOL AND OFFICE SUPPLIES", "required": true}, {"type":
+    "long", "name": "family_SEAFOOD", "required": true}, {"type": "long", "name":
+    "state_Bolivar", "required": true}, {"type": "long", "name": "state_Chimborazo",
+    "required": true}, {"type": "long", "name": "state_Cotopaxi", "required": true},
+    {"type": "long", "name": "state_El Oro", "required": true}, {"type": "long", "name":
+    "state_Esmeraldas", "required": true}, {"type": "long", "name": "state_Guayas",
+    "required": true}, {"type": "long", "name": "state_Imbabura", "required": true},
+    {"type": "long", "name": "state_Loja", "required": true}, {"type": "long", "name":
+    "state_Los Rios", "required": true}, {"type": "long", "name": "state_Manabi",
+    "required": true}, {"type": "long", "name": "state_Pastaza", "required": true},
+    {"type": "long", "name": "state_Pichincha", "required": true}, {"type": "long",
+    "name": "state_Santa Elena", "required": true}, {"type": "long", "name": "state_Santo
+    Domingo de los Tsachilas", "required": true}, {"type": "long", "name": "state_Tungurahua",
+    "required": true}, {"type": "long", "name": "city_Babahoyo", "required": true},
+    {"type": "long", "name": "city_Cayambe", "required": true}, {"type": "long", "name":
+    "city_Cuenca", "required": true}, {"type": "long", "name": "city_Daule", "required":
+    true}, {"type": "long", "name": "city_El Carmen", "required": true}, {"type":
+    "long", "name": "city_Esmeraldas", "required": true}, {"type": "long", "name":
+    "city_Guaranda", "required": true}, {"type": "long", "name": "city_Guayaquil",
+    "required": true}, {"type": "long", "name": "city_Ibarra", "required": true},
+    {"type": "long", "name": "city_Latacunga", "required": true}, {"type": "long",
+    "name": "city_Libertad", "required": true}, {"type": "long", "name": "city_Loja",
+    "required": true}, {"type": "long", "name": "city_Machala", "required": true},
+    {"type": "long", "name": "city_Manta", "required": true}, {"type": "long", "name":
+    "city_Playas", "required": true}, {"type": "long", "name": "city_Puyo", "required":
+    true}, {"type": "long", "name": "city_Quevedo", "required": true}, {"type": "long",
+    "name": "city_Quito", "required": true}, {"type": "long", "name": "city_Riobamba",
+    "required": true}, {"type": "long", "name": "city_Salinas", "required": true},
+    {"type": "long", "name": "city_Santo Domingo", "required": true}, {"type": "long",
+    "name": "type_x_B", "required": true}, {"type": "long", "name": "type_x_C", "required":
+    true}, {"type": "long", "name": "type_x_D", "required": true}, {"type": "long",
+    "name": "type_x_E", "required": true}, {"type": "long", "name": "type_y_Bridge",
+    "required": true}, {"type": "long", "name": "type_y_Event", "required": true},
+    {"type": "long", "name": "type_y_Holiday", "required": true}, {"type": "long",
+    "name": "type_y_Regular Day", "required": true}, {"type": "long", "name": "type_y_Transfer",
+    "required": true}, {"type": "long", "name": "is_holiday", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float32", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-12-01 15:29:45.785929'

@@ -1,0 +1,15 @@
+creation_timestamp: 1764602993580
+current_stage: None
+deployment_job_state: null
+description: null
+last_updated_timestamp: 1764602993580
+model_id: m-30f26403e38f41cbb842905184311c36
+name: Sales_Forecasting_and_Analytics
+run_id: 05b8032de031416ba3e65db627cab2b4
+run_link: null
+source: models:/m-30f26403e38f41cbb842905184311c36
+status: READY
+status_message: null
+storage_location: file:///D:/MyCase/Projects/DSAI/portfolio/Sales_Forecasting_and_Analytics/mlruns/0/models/m-30f26403e38f41cbb842905184311c36/artifacts
+user_id: null
+version: 4

@@ -33,6 +33,7 @@ uvicorn                      # ASGI server for fastapi
 
 # Additional Tools
 
+npm
 notebook                  # For EDA and experimentation
 
 # -e .

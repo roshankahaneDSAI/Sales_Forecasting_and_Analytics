@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/MyCase/Projects/DSAI/portfolio/Sales_Forecasting_and_Analytics/mlruns/0/05b8032de031416ba3e65db627cab2b4/artifacts
+end_time: 1764602993631
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 05b8032de031416ba3e65db627cab2b4
+run_name: resilient-conch-609
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1764602985734
+status: 3
+tags: []
+user_id: roshankahaneDSAI

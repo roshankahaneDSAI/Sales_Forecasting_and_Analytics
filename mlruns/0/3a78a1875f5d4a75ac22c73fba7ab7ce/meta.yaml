@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/MyCase/Projects/DSAI/portfolio/Sales_Forecasting_and_Analytics/mlruns/0/3a78a1875f5d4a75ac22c73fba7ab7ce/artifacts
+end_time: 1764602668705
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 3a78a1875f5d4a75ac22c73fba7ab7ce
+run_name: bright-perch-307
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1764602668624
+status: 3
+tags: []
+user_id: roshankahaneDSAI

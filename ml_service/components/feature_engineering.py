@@ -57,11 +57,16 @@ class FeatureEngineeringAndDataTransformation:
         cat_columns = ["family", "state", "city", "type_x", "type_y"]
 
         combined = pd.concat([train_df, test_df], keys=["train", "test"])
-        combined = pd.get_dummies(combined, columns=cat_columns, drop_first=True, dtype=int)
+        # combined = pd.get_dummies(combined, columns=cat_columns, drop_first=True, dtype=int)
+
+        encoded = pd.get_dummies(combined[cat_columns], drop_first=True, dtype=int)
+        combined = pd.concat([combined, encoded], axis=1)
 
         train_df = combined.xs("train").copy()
         test_df = combined.xs("test").copy()
 
+        print(f"DataFrame cols: {train_df.columns.to_list()}")
+        
         scale_columns = [
             col for col in train_df.columns
             if any(x in col for x in [
