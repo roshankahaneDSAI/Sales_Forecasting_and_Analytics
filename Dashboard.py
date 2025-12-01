@@ -9,6 +9,24 @@ try:
     train_df = pd.read_csv("data/train_final.csv", low_memory=False)
     train_df['date'] = pd.to_datetime(train_df['date'])
     print("Data loaded successfully from train_final.csv")
+    print(f"DataFrame cols: {train_df.columns.to_list()}")    
+    cols_for_dash = [
+        "date",
+        "store_nbr",
+        "family",
+        "state",
+        "city",
+        "type_x",
+        "type_y",
+        "cluster",
+        "transactions",
+        "onpromotion",
+        "sales",    # or your target name
+    ]
+
+    # Drop all other (dummy) columns
+    train_df = train_df[cols_for_dash].copy()
+
 
 except FileNotFoundError:
     print("Files not found. Generating dummy data...")
