@@ -90,7 +90,7 @@ export default function InputForm() {
         transactions: Number(formData.transactions)
       };
 
-      const response = await fetch("http://localhost:8000/predict", {
+      const response = await fetch("http://127.0.0.1:8080/predict", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

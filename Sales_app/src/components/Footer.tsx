@@ -11,7 +11,7 @@ export default function Footer() {
             <Link href="#home" className="flex items-center">
               <Image
                 src={Logo}
-                alt="SalesNexus Logo"
+                alt="Sales Logo"
                 width={150}
                 height={150}
                 className="rounded-full"
@@ -36,7 +36,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <div className="text-gray-400 text-sm text-center md:text-right">
-            © 2025 Created by Naresh B A
+            © 2025 Created by Roshan K
           </div>
         </div>
       </div>

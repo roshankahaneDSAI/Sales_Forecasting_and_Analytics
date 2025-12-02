@@ -25,7 +25,7 @@ export default function Navbar() {
           <Link href="#home" className="flex items-center">
             <Image
               src={Logo}
-              alt="SalesNexus Logo"
+              alt="Sales Logo"
               width={150}
               height={150}
               className="rounded-full"
