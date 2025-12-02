@@ -450,7 +450,7 @@ export default function InputForm() {
             isLoading ? "opacity-70 cursor-not-allowed" : "hover:from-green-600 hover:to-purple-700 transform hover:scale-105"
           } focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75`}
         >
-          {isLoading ? "Predicting..." : "Predict Sales"}
+          {isLoading ? "Predicting..." : "Forecast Sales"}
         </button>
       </form>
 
