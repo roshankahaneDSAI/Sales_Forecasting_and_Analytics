@@ -1,4 +1,4 @@
-# 🧠 **Sales_Forecasting_and_Analytics – AI-Powered Retail Sales Forecasting Platform**
+# 🧠 **Sales Forecasting and Analytics – AI Powered Retail Sales Forecasting Platform**
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
 ![Next.js](https://img.shields.io/badge/Next.js-13-black?logo=next.js)
@@ -14,7 +14,7 @@
 ![DVC](https://img.shields.io/badge/DVC-Data%20Versioning-purple?logo=dvc)
 ![MIT License](https://img.shields.io/badge/License-MIT-green.svg)
 
-**Sales_Forecasting_and_Analytics** is a modern, full-stack retail forecasting ecosystem that helps stores **predict demand, optimize inventory, and reduce waste** using state-of-the-art ML models and interactive dashboards.
+**Sales Forecasting and Analytics** is a modern, full-stack retail forecasting ecosystem that helps stores **predict demand, optimize inventory, and reduce waste** using state-of-the-art ML models and interactive dashboards.
 Built for real-world retail datasets, the platform integrates **Next.js UI**, **MLflow tracking**, **Dash analytics**, and **CatBoost/XGBoost pipelines** to deliver powerful insights effortlessly.
 
 ---
@@ -182,23 +182,22 @@ Runs at: **[http://localhost:3000](http://localhost:3000)**
 
 ### 🌐 **Website (Next.js UI)**
 
-![Screenshot 2025-06-28 002921](https://github.com/user-attachments/assets/1f98cc93-d607-4d8f-90b9-79cbda3441bf)
-![Screenshot 2025-06-28 003031](https://github.com/user-attachments/assets/568e52cc-f822-4f79-9e01-53b3b5bf717d)
-![Screenshot 2025-06-28 003044](https://github.com/user-attachments/assets/6d985386-f49c-4ac1-8dc9-5e59a0dc4007)
+![Home Screenshot](./Sales_app/public/home.png)
+![Predicted Screenshot](./Sales_app/public/Predicted.png)
+![Context Screenshot](./Sales_app/public/Context.png)
 
 ---
 
-### 📊 **MLflow Dashboard**
+<!-- ### 📊 **MLflow Dashboard**
 
-![Screenshot 2025-06-28 003148](https://github.com/user-attachments/assets/15b16652-1b67-4bea-8a1a-9af97d5376f3)
-
----
+![Context Screenshot](./Sales_app/public/Dashboard.png)
+![Context Screenshot](./Sales_app/public/Dashboard2.png)
+--- -->
 
 ### 📈 **Dash Analytics Panel**
 
-![Screenshot 2025-06-27 220938](https://github.com/user-attachments/assets/87aa8c83-0ff5-4834-9e2f-c223743df052)
-![Screenshot 2025-06-27 220910](https://github.com/user-attachments/assets/3afa1410-3548-408b-9e1f-f64049d20ee9)
-
+![Context Screenshot](./Sales_app/public/Dashboard.png)
+![Context Screenshot](./Sales_app/public/Dashboard2.png)
 ---
 
 # 📜 License
