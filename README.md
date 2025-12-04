@@ -182,7 +182,7 @@ Runs at: **[http://localhost:3000](http://localhost:3000)**
 
 ### 🌐 **Website (Next.js UI)**
 
-![Home Screenshot](./Sales_app/public/home.png)
+![Home Screenshot](./Sales_app/public/Home.png)
 ![Predicted Screenshot](./Sales_app/public/Predicted.png)
 ![Context Screenshot](./Sales_app/public/Context.png)
 
